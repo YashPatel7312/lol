@@ -1,0 +1,18 @@
+/* Make sure the page fills full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex column layout for app */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content grows, footer stays at bottom */
+main {
+  flex: 1;
+}
