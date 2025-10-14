@@ -1,21 +1,36 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./footer.css";
 import logo from "../assets/lol.png";
-import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goToSafety = () => {
+    navigate("/safety");
+    handleScrollTop();
+  };
+
+  const goToHome = () => {
+    navigate("/");
+    handleScrollTop();
+  };
+
+  const handleContactClick = () => {
+    window.location.href = "mailto:support@lolapp.com";
+  };
+
   return (
     <footer className={`footer ${isHomePage ? "footer-home" : "footer-other"}`}>
       <div className="footer-container">
         {/* Left Section */}
-        <div className="footer-left">
+        <div className="footer-left" onClick={goToHome} style={{ cursor: "pointer" }}>
           <img src={logo} alt="LOL Logo" className="footer-logo" />
           <h3>Join our newsletter</h3>
           <p>
@@ -27,8 +42,12 @@ const Footer = () => {
         {/* Middle Section */}
         <div className="footer-middle">
           <ul>
-            <li><a href="/safety">Safety</a></li>
-            <li><a href="/contact">Contact us</a></li>
+            <li>
+              <button onClick={goToSafety} className="footer-link-btn">Safety</button>
+            </li>
+            <li>
+              <button onClick={handleContactClick} className="footer-link-btn">Contact us</button>
+            </li>
           </ul>
         </div>
 

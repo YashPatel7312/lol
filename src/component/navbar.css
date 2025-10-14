@@ -10,7 +10,7 @@
 
 
 /* =============================
-   NAVBAR
+   NAVBAR WRAPPER
 ============================= */
 
 .navbar {
@@ -60,22 +60,28 @@
     font-family: "BwGradual", sans-serif;
 }
 
-.nav-center ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
+
+/* 👇 Targeting BUTTON (not <a>) */
+
+.nav-center ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size: 19px;
+    font-weight: 700;
+    color: black;
     transition: 0.3s;
     padding: 8px 24px;
+    font-family: "BwGradual", sans-serif;
 }
 
-.nav-center ul li a:hover {
+.nav-center ul li button:hover {
     color: #e74c3c;
 }
 
 
 /* =============================
-   APP BUTTONS
+   APP BUTTONS (Right Side)
 ============================= */
 
 .app-buttons {
@@ -110,7 +116,7 @@
 
 
 /* =============================
-   MOBILE MENU TOGGLER
+   MOBILE MENU TOGGLER (Hamburger)
 ============================= */
 
 .mobile-menu-icon {
@@ -122,7 +128,7 @@
 
 
 /* =============================
-   MOBILE DROPDOWN
+   MOBILE DROPDOWN MENU
 ============================= */
 
 .mobile-dropdown {
@@ -151,15 +157,34 @@
     gap: 12px;
 }
 
-.mobile-dropdown ul li a {
-    text-decoration: none;
+
+/* 👇 Targeting BUTTON inside mobile menu */
+
+.mobile-dropdown ul li button {
+    background: none;
+    border: none;
+    text-align: left;
     color: black;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    padding: 5px 0;
 }
 
-.mobile-dropdown ul li a:hover {
+.mobile-dropdown ul li button:hover {
     color: #e74c3c;
+}
+
+
+/* =============================
+   MOBILE APP BUTTONS
+============================= */
+
+.mobile-app-buttons {
+    margin-top: 10px;
+    align-self: flex-start;
+    margin: auto;
 }
 
 
@@ -171,7 +196,7 @@
     .nav-center,
     .nav-right {
         display: none;
-        /* ✅ Hide top menu and app buttons on mobile */
+        /* ✅ Hide desktop nav & buttons */
     }
     .navbar {
         padding: 15px 20px;
@@ -183,11 +208,5 @@
     }
     .mobile-menu-icon {
         display: block;
-    }
-    /* App buttons inside dropdown */
-    .mobile-app-buttons {
-        margin-top: 10px;
-        align-self: flex-start;
-        margin: auto;
     }
 }

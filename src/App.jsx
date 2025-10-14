@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import logo from "./assets/lol.png";
+import { Routes, Route } from "react-router-dom";
 
-// Main Components
+import logo from "./assets/lol.png";
 import Navbar from "./component/navbar";
-import Footer from "./component/footer";   // ✅ FIXED
+import Footer from "./component/footer";
+
+import Homepage from "./pages/homepage";
+import BlogPage from "./pages/blogpage";
+import Safetypage from "./pages/safetypage";
+
 import "./loader.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (5 seconds)
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
+    const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -27,7 +28,11 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <h1 style={{ textAlign: "center", marginTop: "50px" }}>Welcome 🚀</h1>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/safety" element={<Safetypage />} />
+          </Routes>
           <Footer />
         </>
       )}
