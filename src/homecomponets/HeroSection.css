@@ -1,0 +1,79 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/joinfun.svg');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 40px;
+    border-radius: 12px;
+    color: #fff;
+    max-width: 700px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.primary-btn {
+    background-color: #ff3c78;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #e83366;
+}
+
+.secondary-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.secondary-btn:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-section {
+        height: 55vh;
+    }
+}

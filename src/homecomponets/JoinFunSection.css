@@ -1,0 +1,132 @@
+/* Full-screen section */
+
+.joinfun-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/joinfun.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* Orbit background that rotates smoothly */
+
+.orbit-bg {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 120%;
+    /* smaller than before (was 150%) */
+    height: 120%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.rotating-bg {
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    animation: spin 60s linear infinite;
+    transform-origin: center;
+    opacity: 0.9;
+}
+
+
+/* Center content — perfectly centered inside orbit */
+
+.center-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* ensures perfect centering */
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* QR and text */
+
+.qr-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.qr {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+}
+
+
+/* Text styling */
+
+.join-text {
+    font-size: 65px;
+    font-weight: 800;
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+/* Smooth rotation */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+    .orbit-bg {
+        width: 130%;
+        height: 130%;
+    }
+    .join-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .orbit-bg {
+        width: 150%;
+        height: 150%;
+    }
+    .qr-wrapper {
+        gap: 20px;
+    }
+    .join-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .orbit-bg {
+        width: 180%;
+        height: 180%;
+    }
+    .qr-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .join-text {
+        font-size: 1.8rem;
+    }
+}

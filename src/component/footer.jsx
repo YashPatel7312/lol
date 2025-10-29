@@ -28,13 +28,14 @@ const Footer = () => {
 
   return (
     <footer className={`footer ${isHomePage ? "footer-home" : "footer-other"}`}>
+       <div className="container">
       <div className="footer-container">
         {/* Left Section */}
         <div className="footer-left" onClick={goToHome} style={{ cursor: "pointer" }}>
           <img src={logo} alt="LOL Logo" className="footer-logo" />
           <h3>Join our newsletter</h3>
           <p>
-            Stay in the know on the latest alpha, <br />
+            Stay in the know on the latest alpha,
             news and product updates.
           </p>
         </div>
@@ -110,6 +111,7 @@ const Footer = () => {
           <a href="/privacy" className="privacy-link">
             Privacy Policy
           </a>
+        </div>
         </div>
       </div>
     </footer>

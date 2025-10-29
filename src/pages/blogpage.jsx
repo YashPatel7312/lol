@@ -1,10 +1,11 @@
 import React from "react";
 import BlogGrid from "../blogcomponets/BlogGrid";
+import BlogHero from "../blogcomponets/BlogHero";
 
 const BlogPage = () => {
   return (
     <div>
-      <h1 style={{ textAlign: "center", margin: "20px 0" }}>Blog Page</h1>
+      <BlogHero />
       <BlogGrid />
     </div>
   );
