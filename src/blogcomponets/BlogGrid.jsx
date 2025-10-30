@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../blogcomponets/BlogGrid.css   ";
+import "./BlogGrid.css";
 
 const BlogGrid = () => {
   const navigate = useNavigate();
