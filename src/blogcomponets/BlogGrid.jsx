@@ -1,71 +1,44 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./BlogGrid.css";
 
+// ✅ Import all blog images
+import id1 from "../assets/id1.jpg";
+import id2 from "../assets/id2.jpg";
+import id3 from "../assets/id3.jpg";
+import id4 from "../assets/id4.jpg";
+import id5 from "../assets/id5.jpg";
+import id6 from "../assets/id6.jpg";
+import id7 from "../assets/id7.jpg";
+
+// ✅ Blog data
+const blogs = [
+  { id: 1, title: "Hidden Gems: Tips & Tricks for the LOL App", img: id1 },
+  { id: 2, title: "Uplift Your Community: Getting Involved IRL", img: id2 },
+  { id: 3, title: "Announcing New Features and User Controls", img: id3 },
+  { id: 4, title: "LOL Response to FTC Settlement", img: id4 },
+  { id: 5, title: "Staying Safe on LOL: Tips for User Safety", img: id5 },
+  { id: 6, title: "A Guide to Online Privacy", img: id6 },
+  { id: 7, title: "LOL Procedures for Information Requests", img: id7 },
+];
+
 const BlogGrid = () => {
-  const navigate = useNavigate();
-
-  const blogs = [
-    {
-      id: 1,
-      title: "Hidden Gems: Tips & Tricks for the LOL App",
-      image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6",
-      link: "/hidden-gems",
-    },
-    {
-      id: 2,
-      title: "Uplift Your Community: Getting Involved IRL",
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
-      link: "/uplift-community",
-    },
-    {
-      id: 3,
-      title: "Announcing New Features and User Controls",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      link: "/new-features",
-    },
-    {
-      id: 4,
-      title: "LOL Response to FTC Settlement",
-      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
-      link: "/ftc-response",
-    },
-    {
-      id: 5,
-      title: "Staying Safe on LOL: Tips for User Safety",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-      link: "/user-safety",
-    },
-    {
-      id: 6,
-      title: "A Guide to Online Privacy",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
-      link: "/online-privacy",
-    },
-    {
-      id: 7,
-      title: "LOL Procedures for Information Requests",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      link: "/information-requests",
-    },
-  ];
-
   return (
-    <div className="custom-blog-grid">
-      {blogs.map((blog, index) => (
-        <div
+    <div className="container">
+    <div className="custom-grid">
+      {blogs.map((blog) => (
+        <Link
           key={blog.id}
-          className={`blog-card ${
-            index === 3 ? "blog-card-large" : ""
-          }`}
-          onClick={() => navigate(blog.link)}
+          to={`/blog/${blog.id}`} // opens internal new page
+          className={`grid-item id${blog.id}`}
         >
-          <img src={blog.image} alt={blog.title} className="blog-img" />
-          <div className="blog-overlay">
-            <h3>{blog.title}</h3>
+          <img src={blog.img} alt={blog.title} />
+          <div className="overlay">
+            <h3 className="ovtext">{blog.title}</h3>
           </div>
-        </div>
+        </Link>
       ))}
+    </div>
     </div>
   );
 };

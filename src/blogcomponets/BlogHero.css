@@ -1,95 +1,110 @@
-.blog-hero {
-    position: relative;
-    width: 100%;
-    height: 55vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    object-fit: cover;
-    background-image: url("../assets/heroother.svg");
-}
-
-
-/* Text Content */
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: #fff;
+.custom-grid {
+    display: grid;
+    grid-template-areas: "id1 id2" "id1 id3" "id4 id4" "id5 id7" "id6 id7";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     padding: 20px;
-    font-family: "BwGradual", sans-serif;
-}
-
-.hero-title {
-    font-size: 65px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.hero-subtitle {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.6;
 }
 
 
-/* Bottom Curve */
+/* Grid area mapping */
 
-.hero-curve {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
+.id1 {
+    grid-area: id1;
+}
+
+.id2 {
+    grid-area: id2;
+}
+
+.id3 {
+    grid-area: id3;
+}
+
+.id4 {
+    grid-area: id4;
+}
+
+.id5 {
+    grid-area: id5;
+}
+
+.id6 {
+    grid-area: id6;
+}
+
+.id7 {
+    grid-area: id7;
+}
+
+.grid-item {
+    position: relative;
     overflow: hidden;
-    line-height: 0;
-    z-index: 2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.hero-curve svg {
-    display: block;
+.grid-item img {
     width: 100%;
-    height: 120px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 
-/* Responsive Design */
+/* ✅ Add white opacity overlay effect on hover */
 
-@media (max-width: 1024px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
+.grid-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .blog-hero {
-        height: 50vh;
-    }
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-    }
+
+/* On hover → show soft white overlay */
+
+.grid-item:hover::after {
+    background: rgba(255, 255, 255, 0.35);
 }
 
-@media (max-width: 480px) {
-    .blog-hero {
-        height: 45vh;
-    }
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 0.95rem;
+.grid-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Keep overlay text visible and above white layer */
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 16px;
+    color: #fff;
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.overlay h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.grid-item:hover .overlay {
+    opacity: 0.95;
+}
+
+
+/* Responsive layout */
+
+@media (max-width: 992px) {
+    .custom-grid {
+        grid-template-areas: "id1" "id2" "id3" "id4" "id5" "id6" "id7";
+        grid-template-columns: 1fr;
     }
 }
