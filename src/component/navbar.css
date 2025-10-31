@@ -16,7 +16,6 @@
 .navbar {
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #ddd;
     position: relative;
     z-index: 1000;
     padding: 12px 60px;

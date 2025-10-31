@@ -1,79 +1,232 @@
-.hero-section {
+.home-hero {
     position: relative;
-    height: 100vh;
-    background-image: url('../assets/joinfun.svg');
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: url("../assets/homeherobg.svg") center/cover no-repeat;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0px 15px 25px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+}
+
+
+/* Main floating animation (up & down) */
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(-15px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0);
+    }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 5;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-text h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: lowercase;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.download-btn {
+    position: relative;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition: all 0.4s ease;
+}
+
+
+/* Text Layers */
+
+.download-btn {
+    position: relative;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+
+/* ✅ Create a new stacking context */
+
+.download-btn::before,
+.download-btn .text {
+    position: relative;
+    z-index: 2;
+    /* text above overlay */
+}
+
+
+/* Overlay (white) */
+
+.download-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    border-radius: 50px;
+    transform: translate(100%, 100%);
+    /* comes from bottom-right */
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1;
+    /* below text */
+}
+
+
+/* Text layers */
+
+.download-btn .text {
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease;
+}
+
+.download-btn .top-text {
+    color: #fff;
+}
+
+.download-btn .bottom-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #000 !important;
+}
+
+
+/* Hover motion */
+
+.download-btn:hover {
+    transform: translate(-5px, -5px);
+}
+
+
+/* Overlay slides in */
+
+.download-btn:hover::after {
+    transform: translate(0, 0);
+}
+
+
+/* Text transitions */
+
+.download-btn:hover .top-text {
+    transform: translateY(-120%) translateX(-5%);
+    opacity: 0;
+}
+
+.download-btn:hover .bottom-text {
+    top: 0;
+    opacity: 1;
+}
+
+
+/* Optional: click feel */
+
+.download-btn:active {
+    transform: translate(-3px, -3px) scale(0.97);
+}
+
+
+/* Mouse scroll indicator */
+
+.mouse-indicator {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    margin: 3rem auto 0;
+    position: relative;
     overflow: hidden;
 }
 
-.hero-overlay {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.45);
-    padding: 40px;
-    border-radius: 12px;
-    color: #fff;
-    max-width: 700px;
+.wheel {
+    width: 6px;
+    height: 15px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    animation: scrollUpDown 3s ease-in-out infinite;
 }
 
-.hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+
+/*  Only vertical (up–down) animation */
+
+@keyframes scrollUpDown {
+    0% {
+        top: 10px;
+        opacity: 1;
+    }
+    50% {
+        top: 25px;
+        opacity: 0.6;
+    }
+    100% {
+        top: 10px;
+        opacity: 1;
+    }
 }
 
-.hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    line-height: 1.5;
-}
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.primary-btn,
-.secondary-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 6px;
-    transition: background 0.3s;
-}
-
-.primary-btn {
-    background-color: #ff3c78;
-    color: #fff;
-}
-
-.primary-btn:hover {
-    background-color: #e83366;
-}
-
-.secondary-btn {
-    background-color: #fff;
-    color: #000;
-}
-
-.secondary-btn:hover {
-    background-color: #f0f0f0;
-}
+/* Responsive */
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 1.8rem;
+    .hero-text h1 {
+        font-size: 3rem;
     }
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    .hero-section {
-        height: 55vh;
+    .hero-image {
+        width: 90%;
     }
 }
