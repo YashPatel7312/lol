@@ -1,0 +1,253 @@
+/* ============================= */
+
+
+/* 🌈 MAIN HERO SECTION */
+
+
+/* ============================= */
+
+.hero {
+    position: relative;
+    min-height: 120vh;
+    width: 100%;
+    background: url("../assets/bg3.svg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    z-index: 10;
+    margin-top: -100px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+
+/* ============================= */
+
+
+/* 🔄 ROTATING BACKGROUND IMAGE */
+
+
+/* ============================= */
+
+.rotating-bg2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    animation: rotate 12s linear infinite;
+    z-index: 1;
+    /* ✅ stays behind */
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+
+/* Rotation Animation */
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+/* ============================= */
+
+
+/* ✍️ LEFT SIDE TEXT */
+
+
+/* ============================= */
+
+.hero-text2 {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.1;
+    z-index: 3;
+    font-family: BwGradualBold, sans-serif;
+}
+
+
+/* ============================= */
+
+
+/* 👧 GIRL IMAGE */
+
+
+/* ============================= */
+
+.girl-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.girl-image {
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+    z-index: 3;
+}
+
+
+/* ============================= */
+
+
+/* 💳 CARD IMAGE (Right Side) */
+
+
+/* ============================= */
+
+.card-container {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%) rotate(6deg);
+    z-index: 3;
+}
+
+.card-image {
+    width: 260px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ============================= */
+
+
+/* 🌤️ FADE EFFECT (TOP BLENDING) */
+
+
+/* ============================= */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* ============================= */
+
+
+/* 📱 RESPONSIVE DESIGN */
+
+
+/* ============================= */
+
+
+/* 🟢 Tablet (1024px and below) */
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 140px 40px 120px 40px;
+        margin-top: -100px;
+        gap: 30px;
+    }
+    .hero-text2 {
+        position: static;
+        transform: none;
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+    .rotating-bg2 {
+        width: 450px;
+        height: 450px;
+    }
+    .girl-container {
+        margin-bottom: 40px;
+    }
+    .girl-image {
+        width: 280px;
+    }
+    .card-container {
+        position: static;
+        transform: rotate(0);
+        margin-top: 30px;
+    }
+    .card-image {
+        width: 240px;
+    }
+}
+
+
+/* 🟡 Mobile (768px and below) */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 120px 20px 100px 20px;
+        margin-top: -80px;
+        gap: 20px;
+    }
+    .hero-text2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+    .rotating-bg2 {
+        width: 350px;
+        height: 350px;
+    }
+    .girl-container {
+        margin-bottom: 25px;
+    }
+    .girl-image {
+        width: 230px;
+    }
+    .card-image {
+        width: 200px;
+    }
+}
+
+
+/* 🔵 Small Mobile (480px and below) */
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 10px 80px 10px;
+        min-height: 100vh;
+        overflow: hidden;
+        margin-top: -140px;
+    }
+    .hero-text2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .rotating-bg2 {
+        width: 260px;
+        height: 260px;
+    }
+    .girl-image {
+        width: 180px;
+    }
+    .card-container {
+        margin-top: 25px;
+        transform: none;
+    }
+    .card-image {
+        width: 180px;
+    }
+}

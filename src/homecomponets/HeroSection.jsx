@@ -49,14 +49,15 @@ const HomeSection = () => {
 
         <div className="hero-text">
           <h1>
+          
             real <br />
             fun with <br />
             friends
           </h1>
 
           <button className="download-btn">
-            <span className="text top-text">Download now</span>
-            <span className="text bottom-text">Download now</span>
+            <span className="text top-text">Download the app!</span>
+            <span className="text bottom-text">Download the app!</span>
           </button>
 
           <div className="mouse-indicator">

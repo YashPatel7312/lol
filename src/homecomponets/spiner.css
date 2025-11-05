@@ -1,0 +1,189 @@
+.spiner-container {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: -90px;
+}
+
+
+/* Layout container */
+
+.center-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    z-index: 5;
+}
+
+
+/* Left text */
+
+.text-left h1,
+.text-right h1 {
+    font-size: clamp(20px, 40px, 80px);
+    font-weight: 700;
+    text-transform: lowercase;
+    margin: 0;
+    text-align: center;
+    font-family: BwGradualBold, sans-serif;
+}
+
+.highlight {
+    color: #ff6b4a;
+}
+
+
+/* Spinner and pointer */
+
+.spinner-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-wheel {
+    width: clamp(120px, 20vw, 240px);
+    height: clamp(120px, 20vw, 240px);
+    border-radius: 50%;
+    animation: spinInfinite 2s linear infinite;
+}
+
+.pointer {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(40px, 6vw, 65px);
+    z-index: 10;
+}
+
+
+/* Infinite auto rotation */
+
+@keyframes spinInfinite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Floating cards */
+
+.floating-cards {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card {
+    position: absolute;
+    width: clamp(70px, 8vw, 120px);
+    transition: transform 0.5s ease;
+}
+
+
+/* Fine-tuned placement to match your image */
+
+.card-1 {
+    top: 15%;
+    left: 3%;
+    transform: rotate( 0deg);
+}
+
+.card-2 {
+    top: 20%;
+    left: 22%;
+    transform: rotate(60deg);
+}
+
+.card-3 {
+    bottom: 20%;
+    left: 8%;
+    transform: rotate(-25deg);
+}
+
+.card-4 {
+    top: 12%;
+    right: 32%;
+    transform: rotate(60deg);
+}
+
+.card-5 {
+    top: 18%;
+    right: 6%;
+    transform: rotate(40deg);
+}
+
+.card-6 {
+    bottom: 15%;
+    right: 35%;
+    transform: rotate(-16deg);
+}
+
+.card-7 {
+    bottom: 18%;
+    right: 10%;
+    transform: rotate(4deg);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+    .spiner-container {
+        margin-top: -60px;
+        margin-bottom: -100px;
+    }
+    .center-layout {
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .text-left h1,
+    .text-right h1 {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+    .spinner-wheel {
+        width: clamp(180px, 40vw, 260px);
+        height: clamp(180px, 40vw, 260px);
+    }
+}
+
+@media (max-width: 480px) {
+    .center-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-left h1,
+    .text-right h1 {
+        font-size: 1.3rem;
+        padding: 20px;
+    }
+    .spinner-wheel {
+        width: 160px;
+        height: 160px;
+    }
+    .pointer {
+        width: 35px;
+        top: -20px;
+    }
+    .card {
+        width: 60px;
+    }
+}
