@@ -1,0 +1,181 @@
+/* ------------------------------
+   Common Content Layout
+------------------------------ */
+
+.sefety-content {
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    line-height: 1.7;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    white-space: normal;
+    padding-bottom: 3rem;
+}
+
+
+/* ------------------------------
+   Headings
+------------------------------ */
+
+.sefety-content h1,
+.sefety-content h2,
+.sefety-content h3 {
+    color: #111;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+}
+
+.sefety-content h2 {
+    font-size: 1.6rem;
+}
+
+.sefety-content h3 {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+
+/* ------------------------------
+   Paragraphs
+------------------------------ */
+
+.sefety-content p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+.sefety-content a {
+    color: #e94560;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sefety-content a:hover {
+    text-decoration: underline;
+    color: #d7324a;
+}
+
+
+/* ------------------------------
+   Numbered Lists
+------------------------------ */
+
+.numbered-list {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 1.5rem;
+}
+
+.numbered-list li {
+    counter-increment: item;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.numbered-list li::before {
+    content: counter(item) ". ";
+    font-weight: 700;
+    color: #111;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+
+/* ------------------------------
+   Bullet Lists
+------------------------------ */
+
+.bullet-list {
+    list-style: disc;
+    margin: 1rem 0 1.5rem 2rem;
+}
+
+.bullet-list li {
+    margin-bottom: 0.6rem;
+}
+
+.bullet-list strong {
+    color: #000;
+}
+
+
+/* ------------------------------
+   FAQ Section
+------------------------------ */
+
+.faq-container {
+    margin-top: 1.5rem;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #f5d6d6;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #ffeaea;
+    border: none;
+    outline: none;
+    padding: 0.9rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #222;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #ffdede;
+}
+
+.faq-question.active {
+    background: #ffdede;
+    color: #e94560;
+}
+
+.faq-answer {
+    background: #fff8f8;
+    padding: 1rem 1rem 1.2rem 1rem;
+    font-size: 0.9rem;
+    color: #444;
+    border-top: 1px solid #ffdede;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    color: #e94560;
+}
+
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+
+@media (max-width: 768px) {
+    .sefety-content h2 {
+        font-size: 1.3rem;
+    }
+    .sefety-content h3 {
+        font-size: 1.1rem;
+    }
+    .faq-question {
+        font-size: 0.9rem;
+    }
+}
