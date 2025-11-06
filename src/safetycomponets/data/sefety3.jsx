@@ -22,25 +22,27 @@ const Sefety3 = () => {
 {/* aya thi continue kar vaa nu editing */}
       <h2>Be REAL</h2>
       <p>
-        When you create an account on LOL, make sure to provide information that
-        is complete, accurate, and current! We need you to be honest and
-        authentic with us while using the app. Providing inaccurate information
-        is a violation of our Terms of Service, so always be real and authentic
-        while using LOL!
+        When you create an account on LOL, make sure to provide information that is complete, 
+        accurate, and current! In order to provide the optimal app experience for you and the LOL 
+        community, we need you to be honest and authentic with us while using the app. Plus, 
+        providing inaccurate information is in violation of our Terms of Service, so make sure 
+        to be real and be authentic while using LOL!
       </p>
 
       <h2>Be YOU</h2>
       <p>
-        Be yourself when using LOL! Providing fake usernames or links can harm
-        user trust. We’ll never ask for your passwords, so your account is safe
-        with us. Check our Privacy Policy for more information.
+        When using LOL, be sure to be you! Providing an inaccurate social media username may 
+        yield a faulty link for you and worsen your user experience. We won’t ever ask for 
+        your social media passwords, so you and your accounts are safe at LOL. Check out our 
+        Privacy Policy for more information on this!
       </p>
 
       <h2>Have fun!</h2>
       <p>
-        LOL was created to help connect real-world friends digitally. Have fun,
-        stay respectful, and use the app to strengthen friendships — not to harm
-        or embarrass others.
+        LOL was created to more deeply connect real-world friends in the digital space using 
+        the power and fun of q&a. Make sure to use this power to have fun and strengthen your 
+        friendships, while also protecting the LOL community around you. Your own fun doesn’t 
+        have to be at the sake of anyone else’s!
       </p>
 
       <h2>
@@ -48,38 +50,49 @@ const Sefety3 = () => {
         <span role="img" aria-label="no">❌</span>
       </h2>
       <p>
-        To keep the LOL community safe, there are certain types of content that
-        are not allowed:
+        In order to keep the LOL community safe, there are some forms of content that are not 
+        allowed on our platform, such as:
       </p>
 
       <h3>Bullying, Harassment, Bigotry, Violence, or Threats</h3>
 
       <h4>Bullying and Harassment:</h4>
       <ul className="bullet-list">
-        <li>Don’t post anything that could be viewed as bullying or harassment.</li>
-        <li>Don’t spread harmful rumors or gossip about other users.</li>
-        <li>Avoid using hurtful or derogatory names or language.</li>
+        <li>Don't post anything that could be viewed as bullying, abuse, defamation, harassment, 
+          stalking, or targeted hate towards other users.</li>
+        <li>Don't spread gossip or harmful rumors that have no truth without referencing these as
+           such.</li>
+        <li>Avoid the use of hurtful or derogatory names or terms towards those who may be 
+          offended by such.</li>
       </ul>
 
       <h4>Bigotry:</h4>
       <ul className="bullet-list">
-        <li>Don’t use hate speech or discriminate based on race, gender, or religion.</li>
-        <li>Don’t make insensitive jokes or stereotypes.</li>
-        <li>Everyone should feel welcome and respected on LOL.</li>
+        <li>Don’t use hate speech or discriminate based on race, age, ethnicity, gender identity, 
+          religion, sexual orientation or disability.</li>
+        <li>Don't use unnecessary stereotypes or make insensitive jokes based on race, age, 
+          ethnicity, gender identity, religion, sexual orientation or disability.</li>
+        <li>Don’t make anyone feel unwelcome in the LOL community.</li>
       </ul>
 
       <h4>Violence:</h4>
       <ul className="bullet-list">
-        <li>Don’t threaten or glorify violence.</li>
-        <li>Don’t promote self-harm or encourage suicide.</li>
-        <li>Don’t share violent or graphic depictions of harm.</li>
+        <li>Don’t threaten or foretell violence towards others.</li>
+        <li>Don’t promote or encourage suicide, self-injury, eating disorders, or any other 
+          kind of harmful ideology towards others.</li>
+        <li>Don’t promote or aim any kind of physical violence towards yourself or others..</li>
+        <li>Don’t share information or strategies that would assist in the execution of harmful 
+          events towards others</li>
+        <li>Don’t share overly graphic depictions of violence..</li>
       </ul>
 
       <h4>Threats:</h4>
       <ul className="bullet-list">
-        <li>Don’t threaten or intimidate anyone.</li>
-        <li>Don’t make cybersecurity threats.</li>
-        <li>Don’t promote terrorism or extremism.</li>
+        <li>Don’t make any kind of threat, whether direct, veiled, or vague, towards any other user.</li>
+        <li>Don’t make cybersecurity threats arousing concern in other users.</li>
+        <li>Don’t promote, threaten, detail, or publicize cruelty to animals.</li>
+        <li>Don’t use LOL to promote, engage in, recruit, or spread terrorism or violent extremism.</li>
+        <li>Don’t make death threats towards anyone, including yourself, on LOL.</li>
       </ul>
 
       <h3>Spam, Trolling, Misinformation, or Promotion</h3>
@@ -87,49 +100,60 @@ const Sefety3 = () => {
       <h4>Spam:</h4>
       <ul className="bullet-list">
         <li>Don’t submit the same content multiple times.</li>
-        <li>Don’t flood others’ inboxes unnecessarily.</li>
+        <li>Don’t flood a user’s inbox unnecessarily.</li>
       </ul>
 
       <h4>Trolling:</h4>
       <ul className="bullet-list">
-        <li>Don’t use LOL to provoke, insult, or mislead others.</li>
+        <li>Don’t use LOL solely as a means to instigate conflict, create hostility, or begin arguments.</li>
+        <li>Don’t post with the objective of misleading, embarrassing, or arguing with others.</li>
       </ul>
 
       <h4>Misinformation:</h4>
       <ul className="bullet-list">
-        <li>Don’t spread false news or impersonate other people.</li>
-        <li>Don’t use LOL to mislead others about important issues.</li>
+        <li>Don’t use LOL to impede or obstruct justice.</li>
+        <li>Don’t use LOL to obstruct participation in an election or any other kind of civic responsibility.</li>
+        <li>Don’t use LOL to confuse or deceive others regarding elections or other political procedures.</li>
+        <li>Don’t impersonate another person to mislead or confuse others, or to promote or threaten violence.</li>
+        <li>Don’t knowiLOLy share fake news or falsehoods.</li>
       </ul>
 
       <h4>Promotion:</h4>
       <ul className="bullet-list">
-        <li>Don’t share spam, pyramid schemes, or fake promotions.</li>
-        <li>Don’t promote hate groups, scams, or illegal activity.</li>
-        <li>Don’t claim official partnerships with LOL unless approved.</li>
+        <li>Don't share unauthorized promotional material, 'junk mail', 'chain letters', 'pyramid schemes', or any 
+          form of solicitation with personal or commercial intent for revenue or brand growth.</li>
+        <li>Don't promote or attempt to raise funds for violent organizations, hate groups, illegal goods and 
+          services, or any unauthorized or criminal group.</li>
+        <li>Don't excessively promote your own or other personal or commercial social media accounts, 
+          businesses, or organizations.</li>
+        <li>Don’t claim to have a relationship with LOL or that LOL endorses you or your products or services.</li>
       </ul>
 
       <h3>Sexual Content</h3>
 
       <h4>Sexual Harassment:</h4>
       <ul className="bullet-list">
-        <li>Don’t promote or describe sexual acts without consent.</li>
-        <li>Don’t blackmail or threaten others using sexual content.</li>
-        <li>
-          Don’t insult, lie about, or damage anyone’s reputation through sexual
-          remarks.
-        </li>
+        <li>Don’t promote or describe any sexual acts without explicit consent.</li>
+        <li>Don’t threaten other users with the publishing of sexual content, either as a means of coercion 
+          or blackmail or in any other manner.</li>
+        <li>Don’t lie about, dox, defame, or damage anyone using sexual content or information about their 
+         sexual history or behavior.</li>
+         <li>Don’t promote, encourage, or participate in sexual violence.</li>
       </ul>
 
       <h4>Soliciting Sex:</h4>
       <ul className="bullet-list">
-        <li>Don’t ask for or offer sexual favors.</li>
-        <li>Don’t share or seek contact info for sexual purposes.</li>
+        <li>Don’t pressure anyone to engage in sexual behavior.</li>
+        <li>Don’t ask for or offer sexual behaviors, and don’t expect compensation or reciprocation 
+          for any inappropriate requests.</li>
+        <li>Don’t share or seek contact information in the sole pursuit of sexual endeavors.</li>
       </ul>
 
       <h4>Sexualization of Minors:</h4>
       <ul className="bullet-list">
-        <li>Never engage in or depict sexual activity with minors.</li>
-        <li>Never post or discuss any sexual content involving children.</li>
+        <li>Don’t engage in sexual conversations or activity with minors on LOL, or any such behavior 
+          or conversation that may be construed inappropriately.</li>
+        <li>Don’t use LOL for any posting, sharing, or discussing content of sexual nature involving children.</li>
       </ul>
 
       <h2>
@@ -137,35 +161,47 @@ const Sefety3 = () => {
         <span role="img" aria-label="warning">⚠️</span>
       </h2>
       <p>
-        Our AI Moderation should filter most violations automatically, but if
-        something slips through, here’s what you can do:
+        Our AI Moderation should filter out most content in violation of these guidelines, but unfortunately, 
+        messages may slip through from time to time. Here are some steps you can take if you see a message in 
+        violation of our Community Guidelines:
       </p>
 
       <h3>Report it:</h3>
       <p>
-        Use the in-app report feature to flag bullying, spam, or harassment. You
-        can also email{" "}
+        You can always hit the Report button in our app in order to report a message for Bullying or Harassment, 
+        Spam, or because you don’t like it. If you believe that a message needs immediate attention from our 
+        Support team, email us at{" "}
         <a href="mailto:info@plexus-technology.in">
           info@plexus-technology.in
         </a>{" "}
-        for urgent help.
       </p>
 
       <h3>Block the sender:</h3>
       <p>
-        If harassment continues, block the sender to prevent further contact.
+        If you’re experiencing repeated harassment on LOL, blocking the sender will prevent the user from 
+        reaching your inbox going forward.
       </p>
 
       <h3>Get help:</h3>
       <p>
-        If you’re affected emotionally, reach out to a trained professional or
-        visit our Resources page for trusted organizations. Repeated or severe
-        violations can lead to bans and legal reporting.
+        If you’re experiencing turmoil as a result of your LOL experience, please reach out to a trained 
+        mental health professional to seek help. If you are in search of resources, our Resources page 
+        lists various organizations that are ready and willing to help you.
       </p>
 
       <p>
-        Remember — LOL is a fun and safe space to connect with friends
-        authentically. Treat everyone with respect and kindness ❤️
+        Any messages that are deemed to be in violation of these Community Guidelines may be removed at 
+        our discretion at any time. Users in violation of any guideline may be banned from using LOL, 
+        especially for repeat offenses or particularly heinous violations. Any illegal or criminal 
+        activity observed by the LOL team may be reported to the correct authorities, along with any 
+        known information about the offending user. Our Community Guidelines may be updated to reflect 
+        new policies at any point in time, and all new updates are effective immediately upon publication.
+      </p>
+
+      <p>
+        Ultimately, we believe LOL should be a fun and safe space to connect with your friends authentically, 
+        without the pressures and inauthenticity of social media. But using LOL also comes with responsibility, 
+        so please be respectful and always remember to treat others how you wish to be treated
       </p>
     </div>
   );

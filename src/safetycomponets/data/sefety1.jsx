@@ -38,7 +38,6 @@ const Sefety1 = () => {
 
     return (
         <div className="sefety-content">
-            <h2>our approach to safety</h2>
 
             <p>
                 At LOL, safety is our highest priority. We made LOL as a place where you

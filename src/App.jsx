@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // ✅ no BrowserRouter here
 
 import logo from "./assets/lol.png";
 import Navbar from "./component/navbar";
 import Footer from "./component/footer";
+import ScrollToTop from "./component/ScrollToTop"; // ✅ import
 
 import Homepage from "./pages/homepage";
-import BlogPage from "./pages/blogpage"; // main blog grid
+import BlogPage from "./pages/blogpage";
 import Safetypage from "./pages/safetypage";
 
-// ✅ Import your 7 blog detail pages
+// ✅ Blog detail pages
 import Blog1 from "./blogcomponets/Blog1";
 import Blog2 from "./blogcomponets/Blog2";
 import Blog3 from "./blogcomponets/Blog3";
@@ -32,6 +33,8 @@ function App() {
 
   return (
     <>
+      <ScrollToTop /> {/* ✅ scrolls to top on route change */}
+
       {loading ? (
         <div className="loader-container">
           <img src={logo} alt="Loading..." className="loader-logo" />
@@ -44,7 +47,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/safety" element={<Safetypage />} />
 
-            {/* ✅ Add routes for all 7 blogs */}
+            {/* ✅ Blog routes */}
             <Route path="/blog/1" element={<Blog1 />} />
             <Route path="/blog/2" element={<Blog2 />} />
             <Route path="/blog/3" element={<Blog3 />} />

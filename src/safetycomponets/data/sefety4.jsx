@@ -1,106 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
 import "./sefetycss.css";
 
 const Sefety4 = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question: "What is and isn’t allowed on LOL?",
-      answer:
-        "Our Community Guidelines and Terms of Service provide an overview of behaviors and content that are and are not permitted on LOL. In general, LOL is a place for you to have fun, be kind, and make connections; we recommend keeping your communications positive and lighthearted to uplift your LOL community.",
-    },
-    {
-      question: "Can I block message senders on LOL?",
-      answer:
-        "Yes. You can block any user from sending you messages or interacting with your profile. You can manage this in your privacy settings.",
-    },
-    {
-      question: "I received an emergency message; what do I do?",
-      answer:
-        "If you receive an emergency message or something that concerns safety, report it immediately via our in-app tools or contact our support team. We take such reports very seriously.",
-    },
-    {
-      question: "I received a concerning message; what do I do?",
-      answer:
-        "Use the report option available next to the message. Our moderation team will review and take action within minutes to ensure your safety.",
-    },
-    {
-      question: "I’m looking for resources to reach out to. Where can I find these?",
-      answer:
-        "Visit our Resources page to access verified safety organizations and digital wellness programs you can trust.",
-    },
-  ];
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <div className="sefety-content">
-      <h2>our approach to safety</h2>
-
       <p>
-        At LOL, safety is our highest priority. We made LOL as a place where you
-        can foster meaningful and authentic connections with your friends, and
-        we are committed to cultivating a community rooted in kindness and
-        understanding. We take our responsibility to protect the community
-        seriously and are constantly improving our safety features to stay
-        up-to-date with an ever-changing online world.
+        LOL is meant to be a place that is fun and safe for all, where users can 
+        be their authentic selves and deepen their connections with their real-world 
+        friends in an online space. The LOL team has developed a complex safety 
+        system and a dedicated Community Team that work day and night to keep you, 
+        our users, safe. We’ve even added a variety of safety controls that allow 
+        users to enhance the security of their inboxes in unique ways:
       </p>
 
+      <h2>1. Blocked users</h2>
       <p>
-        LOL has built an extensive ecosystem of security tools, safety
-        infrastructure, community guidelines, and user policies that make us a
-        leading voice amongst our peers when it comes to user safety. You can
-        further control your LOL experience by pausing your link at any time,
-        hiding specific words from your messages, blocking specific users, and
-        reporting unwanted behavior.
+        This safety setting displays a list of individuals blocked by the LOL user, 
+        allowing the user to have an overview of everyone that they have blocked and 
+        permitting them to unblock individuals at any time. This provides LOL users 
+        an increased level of control over the security of their inbox.
       </p>
 
+      <h2>2. Pause my link</h2>
       <p>
-        Our Community Team works around the clock to monitor user reports and
-        support tickets, providing 24/7 help and guidance. No concern is too
-        small — we’re here to help. Additionally, LOL leverages Hive
-        Moderation’s automated solution to scan messages for inappropriate
-        content, ensuring a safer and friendlier experience for all.
+        This feature allows LOL users to pause their LOL link, meaning that they can 
+        stop receiving messages in their LOL inbox for their chosen period of time. 
+        If a user becomes overwhelmed by their volume of incoming messages, they can 
+        pause their link for as long as they’d like, waiting to resume receiving 
+        messages until they’re once again ready to use LOL. Currently, users can choose 
+        to pause for preset times of 1, 6, or 24 hours, or they can choose to pause their 
+        link indefinitely and can unpause whenever they’re comfortable.
       </p>
 
-      <h2>moderation</h2>
-
+      <h2>3. Enhanced moderation</h2>
       <p>
-        We take any cases of bullying, hate, or violence very seriously. Our
-        Community Team and Hive Moderation technology act as a safety shield for
-        our community — reviewing content, detecting potential threats, and
-        removing anything that violates our guidelines. Together, they ensure
-        that LOL remains a space where users can express themselves freely while
-        maintaining a respectful and inclusive environment.
+        Users who turn on the enhanced moderation safety control will have even more messages 
+        that meet LOL’s moderation criteria automatically filtered out, so these messages 
+        never appear in users' inboxes.
       </p>
-
-      <h2>faq</h2>
-
-      <div className="faq-container">
-        {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <button
-              className={`faq-question ${
-                openIndex === index ? "active" : ""
-              }`}
-              onClick={() => toggleFAQ(index)}
-            >
-              {faq.question}
-              <span className="arrow">
-                {openIndex === index ? "▲" : "▼"}
-              </span>
-            </button>
-            {openIndex === index && (
-              <div className="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+      <p>
+        Taken together, these safety controls allow LOL users to manage the kind of content 
+        they see in their inboxes, who can send them messages, and when they can receive 
+        messages. In tandem, they provide another layer of security to protect our LOL community.
+      </p>
     </div>
   );
 };
